@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-icon slot="start" name="menu" size="large" class="ion-padding"></ion-icon>
+    <ion-title>
+      Home
+    </ion-title>
+    <ion-text slot="end" (click)="cerrarSesion()" class="ion-padding" >
+      <p>Salir</p>
+    </ion-text>
+    <ion-icon slot="end" name="person-circle-outline" class="ion-padding" size="large"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+
+    <ion-button expand="block" shape="round" (click)="gotoProfile()">Perfil</ion-button>
+    <ion-button expand="block" shape="round" (click)="gotoAsistencia()">Asistencia</ion-button>
+    <ion-button expand="block" shape="round" (click)="logout()">Cerrar sesion</ion-button>
+    <ion-button expand="block" shape="round" (click)="gotoLista()">Test</ion-button>
+
+
+</ion-content>

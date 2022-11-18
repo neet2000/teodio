@@ -1,0 +1,23 @@
+<ion-content class="ion-padding">
+<ion-card>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" > Email </ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked"> Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" shape="round" type="submit" (click)="login()"> Entrar</ion-button>
+    </ion-list>
+  </form>
+</ion-card>
+
+<div style="text-align: center;">
+  <p>No tienes una cuenta? Registrese <a [routerLink]="['/register']"> Aquí !</a></p>
+  <p><a [routerLink]="['/forgot-password']"> Olvidó su contraseña?</a></p>
+</div>
+</ion-content>

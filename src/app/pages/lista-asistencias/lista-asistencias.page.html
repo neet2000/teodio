@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>LISTA-ASISTENCIAS</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list *ngFor="let item of ['aac','PauloIs','Ivan','Cony']" >
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="/assets/cheems.jpg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>{{item}}</h2>
+    
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    <ion-button (click)="scan()">Escanear codigo</ion-button>
+    {{code}}
+</ion-content>
