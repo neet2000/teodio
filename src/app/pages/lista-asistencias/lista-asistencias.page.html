@@ -1,21 +1,35 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>LISTA-ASISTENCIAS</ion-title>
-    </ion-toolbar>
+<ion-header [style.visibility]="content_visibility">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="Volver" mode="ios" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      QR Code
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-list *ngFor="let item of ['aac','PauloIs','Ivan','Cony']" >
-        <ion-item>
-          <ion-avatar slot="start">
-            <img src="/assets/cheems.jpg" />
-          </ion-avatar>
-          <ion-label>
-            <h2>{{item}}</h2>
-    
-          </ion-label>
-        </ion-item>
-      </ion-list>
-    <ion-button (click)="scan()">Escanear codigo</ion-button>
-    {{code}}
+<ion-content [style.visibility]="content_visibility">
+
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <qrcode 
+        [qrdata]="qrCodeString" 
+        [width]="256" 
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button 
+    expand="block" 
+    class="ion-margin" 
+    (click)="startScan()">
+    Escanear codigo QR
+  </ion-button>
+
+  <ion-item *ngIf="scannedResult">
+    <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>
+  </ion-item>
+  
 </ion-content>

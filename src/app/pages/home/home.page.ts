@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,13 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomePage {
 
+  user: any;
+
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+
+    
   )  {}
 
   cerrarSesion(){
@@ -32,7 +37,7 @@ export class HomePage {
     this.router.navigate(['/lista-asistencias']);
   }
 
-  gotoLista(){
-    this.router.navigate(['/carrito'])
+  gotoListas(){
+    this.router.navigate(['/listas'])
   }
   }

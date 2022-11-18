@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { ListaAsistenciasPageRoutingModule } from './lista-asistencias-routing.module';
 
 import { ListaAsistenciasPage } from './lista-asistencias.page';
+import { QRCodeModule } from 'angularx-qrcode';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListaAsistenciasPageRoutingModule
+    ListaAsistenciasPageRoutingModule,
+    QRCodeModule
+    
   ],
   declarations: [ListaAsistenciasPage]
 })

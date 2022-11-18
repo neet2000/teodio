@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-listas',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListasPage implements OnInit {
 
-  constructor() { }
+  constructor(
 
-  ngOnInit() {
+    private router: Router
+
+  ) { 
+
   }
 
+  ngOnInit() {
+    
+  }
+  gotoAsistencia(){
+    this.router.navigate(['/lista-asistencias']);
+  }
 }

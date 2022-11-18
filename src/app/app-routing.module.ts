@@ -17,10 +17,12 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
+    
   }, 
   {
     path: 'loginpage',
     loadChildren: () => import('./pages/loginpage/loginpage.module').then( m => m.LoginpagePageModule)
+   
   }, 
   {
     path: 'forgot-password',
@@ -46,10 +48,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/page-not-found/page-not-found.module').then( m => m.PageNotFoundPageModule),
   },  
   {
-    path: 'cards',
-    loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
-  },
-  {
     path: 'listas',
     loadChildren: () => import('./pages/listas/listas.module').then( m => m.ListasPageModule)
   },
@@ -62,6 +60,7 @@ const routes: Routes = [
     path: 'lista-asistencias',
     loadChildren: () => import('./pages/lista-asistencias/lista-asistencias.module').then( m => m.ListaAsistenciasPageModule)
   },
+
 
 ];
 
